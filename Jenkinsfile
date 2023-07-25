@@ -2,7 +2,7 @@ pipeline {
 	agent {
 		label {
 			label 'master'
-			customWorkspace '/mnt/customwsp-demo'
+			customWorkspace '/mnt/customwsp-demo1'
 		}
 	}
 	stages {
@@ -14,14 +14,14 @@ pipeline {
 		
 		stage ('git-clone') {
 			steps {
-				sh 'git clone https://github.com/induchandra123/game-of-life.git'
+				sh 'git clone https://github.com/induchandra123/webapp.git'
 			}
 		}
 		
 		stage ('build') {
 		
 			steps {
-				dir ('/mnt/customwsp-demo/game-of-life') {
+				dir ('/mnt/customwsp-demo1/webapp') {
 					sh 'mvn clean install'
 				}
 				
