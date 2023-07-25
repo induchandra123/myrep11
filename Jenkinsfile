@@ -2,7 +2,7 @@ pipeline {
 	agent {
 		label {
 			label 'master'
-			customWorkspace '/mnt/customwsp12'
+			customWorkspace '/mnt/customwsp123'
 		}
 	}
 	stages {
