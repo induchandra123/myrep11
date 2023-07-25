@@ -2,7 +2,7 @@ pipeline {
 	agent {
 		label {
 			label 'master'
-			customWorkspace '/mnt/customwsp123'
+			customWorkspace '/mnt/customwsp133'
 		}
 	}
 	stages {
@@ -14,7 +14,7 @@ pipeline {
 		
 		stage ('git-clone') {
 			steps {
-				sh 'git clone https://github.com/induchandra123/webapp.git'
+				sh 'git clone https://github.com/induchandra123/game-of-life.git'
 			}
 		}
 	}
