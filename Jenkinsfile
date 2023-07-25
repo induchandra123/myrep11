@@ -2,7 +2,7 @@ pipeline {
 	agent {
 		label {
 			label 'master'
-			customWorkspace '/mnt/customwsp-demo12'
+			customWorkspace '/mnt/customwsp-demo13'
 		}
 	}
 	stages {
@@ -21,8 +21,8 @@ pipeline {
 		stage ('build') {
 		
 			steps {
-				dir ('/mnt/customwsp-demo12/webapp') {
-					sh 'maven clean install'
+				dir ('/mnt/customwsp-demo13/webapp') {
+					sh 'mvn clean install'
 				}
 				
 			}
