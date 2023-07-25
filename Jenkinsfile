@@ -21,7 +21,7 @@ pipeline {
 		stage ('build stage') {
 			steps {
 				dir ('/mnt/customwsp133/game-of-life') {
-					sh 'mvn clean install'
+					sh 'clean install'
 				}
 			}
 		}
