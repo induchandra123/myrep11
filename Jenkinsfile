@@ -17,3 +17,5 @@ pipeline {
 				sh 'git clone https://github.com/induchandra123/webapp.git'
 			}
 		}
+	}
+}
