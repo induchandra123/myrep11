@@ -19,7 +19,7 @@ pipeline {
 		
 		stage ('git-clone') {
 			steps {
-				sh 'git clone https://github.com/induchandra123/game-of-life.git'
+				sh 'git clone https://github.com/induchandra123/webapp.git'
 			}
 		}
 		
