@@ -8,8 +8,7 @@ pipeline {
 	}
 	
 	tools { 
-        maven '3.9.3' 
-        jdk 'jdk11' 
+        maven '3.9.3'
     }
 	stages {
 		stage ('clean workspace') {
