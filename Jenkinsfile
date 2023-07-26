@@ -26,7 +26,7 @@ pipeline {
 		stage ('build') {
 		
 			steps {
-				dir ('/mnt/customwsp/game-of-life') {
+				dir ('/mnt/customwsp/webapp') {
 					sh 'mvn -Dmaven.test.failure.ignore=true install'
 				}
 			}
