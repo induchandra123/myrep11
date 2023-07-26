@@ -28,7 +28,7 @@ pipeline {
 		
 			steps {
 				dir ('/mnt/customwsp/game-of-life') {
-					sh 'mvn -Dmaven.test.failure.ignore=true install'
+					sh 'mvn clean install'
 				}
 			}
 		}
