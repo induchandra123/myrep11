@@ -27,7 +27,7 @@ pipeline {
 		
 			steps {
 				dir ('/mnt/customwsp/game-of-life') {
-					sh 'mvn clean install'
+					sh 'mvn clean package'
 				}
 			}
 		}
