@@ -22,7 +22,7 @@ pipeline {
 		
 			steps {
 				dir ('/mnt/customwsp/game-of-life') {
-					sh '/mnt/build-tools/apache-maven-3.9.3/bin/mvn clean install'
+					sh '/mnt/build-tools/apache-maven-3.9.3/bin/mvn -v'
 				}
 			}
 		}
