@@ -1,31 +1,23 @@
 pipeline {
-	agent {
-		label {
-			label 'master'
-			customWorkspace '/mnt/customwsp'
-		}
-	}
-	stages {
-		stage ('clean workspace') {
-			steps {
-				cleanWs()
-			}
-		}
-		
-		stage ('git-clone') {
-			steps {
-				sh 'git clone https://github.com/induchandra123/game-of-life.git'
-			}
-		}
-		
-		stage ('build') {
-		
-			steps {
-				dir ('/mnt/customwsp/game-of-life') {
-					sh '/mnt/build-tools/apache-maven-3.9.3/bin/mvn clean package'
-				}
-			}
-		}
-	}
+    agent any
+    tools { 
+        maven '3.9.3' 
+        jdk 'jdk11' 
+    }
+    stages {
+        stage ('Initialize') {
+            steps {
+                sh '''
+                    echo "PATH = ${PATH}"
+                    echo "MAVEN-HOME = ${MAVEN_HOME}"
+                ''' 
+            }
+        }
+
+        stage ('Build') {
+            steps {
+                echo 'This is a minimal pipeline.'
+            }
+        }
+    }
 }
-			
